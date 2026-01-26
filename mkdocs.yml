@@ -46,6 +46,8 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Concepts: concepts.md
+  - Functionality:
+    - Smart Features: functionality/smart-features.md
   - API Reference: reference/api.md
   - Architecture:
     - Overview: architecture/overview.md
@@ -54,5 +56,5 @@ nav:
     - Data Flow: architecture/data-flow.md
   - Guides:
     - Project Setup: guides/setup.md
-    - Adding Reports: guides/reports.md
-    - Extending the System: guides/extension.md
+    - Implementation: guides/extension.md
+    - "Dev - Adding Reports": guides/dev-reports.md

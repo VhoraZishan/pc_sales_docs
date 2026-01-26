@@ -1,6 +1,7 @@
-# Adding New Reports
+# Developer Guide: Adding New Reports
 
-This guide explains how to add a new customized report to the system.
+!!! danger "Technical Guide Only"
+    This page is intended for **Backend Developers** extending the Python codebase. If you are a user looking to *view* reports, go to the Frontend Dashboard.
 
 ## Overview
 Reports in this system are generated on the fly. They generally involve:
@@ -76,8 +77,3 @@ def get_top_products_pdf(db: SupabaseClient = Depends(get_db)):
         media_type="application/pdf"
     )
 ```
-
-## Best Practices
-1.  **Read-Only**: Ensure your report queries never modify data.
-2.  **Date Filters**: Always confirm `start_date` and `end_date` formats to avoid database errors.
-3.  **Performance**: For large datasets, use Supabase `.limit()` or perform aggregation in SQL logic (RPC calls) if possible, rather than Python loops.
