@@ -1,0 +1,58 @@
+site_name: Parul Chemicals Sales Docs
+
+theme:
+  name: material
+  logo: assets/images/logo.jpg
+  favicon: assets/images/favicon.ico
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: deep_purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: deep_purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+
+nav:
+  - Home: index.md
+  - Concepts: concepts.md
+  - API Reference: reference/api.md
+  - Architecture:
+    - Overview: architecture/overview.md
+    - Database Schema: architecture/database.md
+    - Modules: architecture/modules.md
+    - Data Flow: architecture/data-flow.md
+  - Guides:
+    - Project Setup: guides/setup.md
+    - Adding Reports: guides/reports.md
+    - Extending the System: guides/extension.md
